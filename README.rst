@@ -44,13 +44,15 @@ Requirements
 #. realpath
 #. sudo (the script itself calls it, running as root without sudo won't work)
 
+
 Build WhiteNode From within WhiteNode / Raspbian / Debian / Ubuntu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 WhiteNode can be built from Debian, Ubuntu, Raspbian, or even WhiteNode.
 Build requires about 2.5 GB of free space available.
 You can build it by issuing the following commands::
-
+   
+    sudo apt-get install git zip  #add by john
     sudo apt-get install realpath qemu-user-static
     
     git clone https://github.com/oizopower/CustomPiOS.git
@@ -61,6 +63,22 @@ You can build it by issuing the following commands::
     ../../CustomPiOS/src/update-custompios-paths
     sudo modprobe loop
     sudo bash -x ./build_dist
+    
+    
+    Note by john: 
+    Example : Ubuntu 14.04LTS
+    Create vps
+    login vps with root
+    #cat /etc/issue
+    #apt-get update
+    #apt-get upgrade
+    #apt-get dist-grade
+    #apt-get clean
+    #apt-get automove
+    
+    #adduser john
+    #adduser john sudo
+    
     
 Building WhiteNode Variants
 ~~~~~~~~~~~~~~~~~~~~~~~~
